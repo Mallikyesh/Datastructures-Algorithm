@@ -5,14 +5,19 @@ struct rectangle
 {
     int length;
     int breadth;
-    int car;
 
 };
 
 int main()
 {
-    struct rectangle r={10,5,100};
+    struct rectangle r={10,5};
     
-    printf("%ld bytes\n", sizeof(r));
+    printf("%d , %d\n", r.length, r.breadth );
+
+    printf("trying pointer\n");
+
+    struct rectangle *p = &r;
+    printf("%d\n",p->length);
+    printf("%d\n",p->breadth);
     return 0;
 }
